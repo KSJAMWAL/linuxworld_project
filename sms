@@ -1,7 +1,7 @@
 from twilio.rest import Client
-ACCOUNT_SID = "    "
-AUTH_TOKEN = "     " 
-TWILIO_NUMBER = "      "
+ACCOUNT_SID = "abc"
+AUTH_TOKEN = "abc" 
+TWILIO_NUMBER = "+128773"
 RECIVER_NUMBER = "ENTER PHONE NUMBER WHERE TO SENT"
 Client = Client.message.create(
     body = " Hello ",
