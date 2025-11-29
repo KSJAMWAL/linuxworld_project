@@ -1,0 +1,24 @@
+from twilio.rest import Client
+ACCOUNT_SID = "abc"
+AUTH_TOKEN = "abc"
+
+client = Client(ACCOUNT_SID, AUTH_TOKEN)
+
+TWILIO_WHATSAPP_NUMBER = "+14155238886"   
+RECEIVER_NUMBER = "+91XXXXXXXXXX"        
+
+# Humanized message
+message_text = (
+    "👋 Hey there!\n\n"
+    "Just wanted to drop by and say hi. "
+    "Hope your day’s going well 🌸.\n\n"
+    "Talk soon!"
+)
+
+message = client.messages.create(
+    body=message_text,
+    from_=TWILIO_WHATSAPP_NUMBER,
+    to=RECEIVER_NUMBER
+)
+
+print("Message SID:", message.sid)
